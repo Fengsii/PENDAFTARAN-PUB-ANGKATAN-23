@@ -1,0 +1,162 @@
+*{
+   padding: 0;
+   margin: 0;
+   font-family: sans-serif;
+   box-sizing: border-box;
+}
+
+body {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+   background-image: linear-gradient(#380036,#0CBABA);
+}
+
+.container {
+   max-width: 650px;
+   padding: 28px;
+   margin: 0 28px;
+   border-radius: 10px;
+   overflow: hidden;
+   background: rgba(0,0,0,0.2);
+   box-shadow: 0 15px 20px rgba(0,0,0,0.6);
+}
+
+h2 {
+   font-size: 24px;
+   font-weight: bold;
+   text-align: center;
+   color: #fff;
+   padding-bottom: 8px;
+   border-bottom: 1px solid silver;
+}
+
+.contant {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   padding: 20px 0;
+}
+
+.inputan-box {
+   display: flex;
+   flex-wrap: wrap;
+   width: 50%;
+   padding-bottom: 15px;
+}
+
+.inputan-box:nth-child(2n) {
+   justify-content: end;
+}
+
+.inputan-box label, .jenis-kelamin {
+   width: 95%;
+   color: #fff;
+   font-weight: bold;
+   margin: 5px 0;
+}
+
+.jenis-kelamin {
+   font-size: 16px;
+}
+
+.inputan-box input {
+   height: 40px;
+   width: 95%;
+   padding: 0 10px;
+   border-radius: 5px;
+   border: 1px solid #ccc;
+   outline: none;
+}
+
+.inputan-box input:is(:focus,:valid){
+   box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+}
+
+.jenis-kelamin label {
+   padding: 0 20px 0 5px;
+   font-size: 14px;
+}
+
+.jenis-kelamin{
+   color: gainsboro;
+}
+
+.jenis-kelamin label, .jenis-kelamin input {
+   cursor: pointer;
+}
+
+.ket > p{
+   font-size: 14px;
+   font-style: italic;
+   color: #fff;
+   margin: 5px 0;
+   padding: 10px;
+   line-height: 1.5;
+}
+
+.ket > a {
+   font-weight: bold;
+   text-decoration: none;
+   color: skyblue;
+}
+
+.ket > a:hover {
+   font-weight: bold;
+   text-decoration: underline;
+   columns: #360038;
+}
+
+.button-register {
+   margin: 15px 0;
+
+}
+
+.button-register > button {
+   width: 100%;
+   margin: 10px;
+   padding: 10px;
+   display: block;
+   font-size: 20px;
+   color: #fff;
+   border: none;
+   border-radius: 5px;
+   background-image: linear-gradient(to right, #aa076b, #61045f);
+   cursor: pointer;
+   transition: 0.3s;
+}
+
+.button-register > button:hover {
+   background-image: linear-gradient(to right, #61045f, #aa076b);
+}
+
+@media(max-width:600px){
+   .container {
+      max-width: 280px;
+   }
+
+   .contant {
+      max-height: 380px;
+      overflow: auto;
+   }
+
+   .inputan-box {
+      margin-bottom: 12px;
+      width: 100%;
+   }
+
+   .inputan-box:nth-child(2n) {
+      justify-content: space-between;
+   }
+
+   .jenis-kelamin {
+      display: flex;
+      justify-content: space-between;
+      width: 60%;
+   }
+
+   .contant::-webkit-scrollbar {
+      width: 0;
+   }
+}
